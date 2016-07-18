@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-cloak>
+<head>
+  <title>Test Front-end</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" href="/css/responsiveTable.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/node_modules/angular-aria/angular-aria.js"></script>
+    <script src="/node_modules/angular-animate/angular-animate.js"></script>
+    <script src="/node_modules/angular-material/angular-material.js"></script>
+    <script src="/node_modules/angular-material-icons/angular-material-icons.js"></script>
+    <script src="/node_modules/angular-route/angular-route.js"></script>
+    <script src="/node_modules/angular-messages/angular-messages.js"></script>
+
+    <!-- APP -->
+    <script src="/js/app.js"></script>
+
+    <!-- ROUTES -->
+    <script src="/js/config/routes/routesConfig.js"></script>
+
+
+    <!-- SERVICES -->
+    <script src="/js/services/coursesService.js"></script>
+    <script src="/js/services/toastService.js"></script>
+
+    <!-- CONTROLLERS -->
+    <script src="/js/controllers/appCtrl.js"></script>
+    <script src="/js/controllers/coursesCtrl.js"></script>
+
+    <!-- DIRECTIVES -->
+    <script src="/js/directives/responsiveTable.js"></script>
+
+
+</head>
+    <body ng-controller="appCtrl">
+      <header ng-include="'views/header.html'"></header>
+      <main>
+        <md-content>
+          <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab>
+              <a href="/#registration"><md-tab-label>Matrícula</md-tab-label></a>
+            </md-tab>
+            <md-tab>
+              <a href="/#studants"><md-tab-label>Estudantes</md-tab-label></a>
+            </md-tab>
+              <md-tab>
+              <a href="/#courses"><md-tab-label>Cursos</md-tab-label></a>
+            </md-tab>
+          </md-tabs>
+          <md-content class="md-padding">
+          </md-content>
+          <ng-view />
+          </md-content>
+      </main>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+  <section layout="row">
+    <md-button class="md-fab md-fab-top-right" aria-label="Add" ng-click="showAdd($event)">
+      <ng-md-icon icon="add"></ng-md-icon>
+    </md-button>
+    <md-content layout="column" layout-fill="layout-fill" role="main" class="relative">
+      <md-list>
+        <md-subheader class="md-no-sticky">Lista de cursos</md-subheader>
+        <md-list-item ng-repeat="course in courses" ng-click="showAdd($event, course)" class="noright">
+          <p>{{::course.name }}</p>
+          <md-divider ng-if="!$last"></md-divider>
+          <ng-md-icon class="md-secondary" ng-click="showAdd($event, course)" aria-label="Editar Curso" icon="edit"></ng-md-icon>
+          <ng-md-icon class="md-secondary" ng-click="remove(course)" aria-label="Excluir Curso" icon="delete"></ng-md-icon>
+        </md-list-item>
+    </md-list>
+    </md-content>
+</section>

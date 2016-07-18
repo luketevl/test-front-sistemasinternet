@@ -1,0 +1,38 @@
+{
+  "name": "test-front-end",
+  "version": "1.0.0",
+  "description": "Test for front end developer",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luketevl/test-front-egenius.git"
+  },
+  "keywords": [
+    "frontend",
+    "test",
+    "developer"
+  ],
+  "author": "lukete",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luketevl/test-front-egenius/issues"
+  },
+  "homepage": "https://github.com/luketevl/test-front-egenius",
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-animate": "^1.5.7",
+    "angular-aria": "^1.5.7",
+    "angular-material": "^1.1.0-rc.5",
+    "angular-material-icons": "^0.7.1",
+    "angular-messages": "^1.5.7",
+    "angular-route": "^1.5.7"
+  },
+  "devDependencies": {
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "sass": "^0.5.0"
+  }
+}

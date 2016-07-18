@@ -1,0 +1,17 @@
+<md-dialog aria-label="Cursos Cadastro">
+  <md-content class="md-padding">
+    <form name="courseForm">
+      <div layout layout-sm="column">
+        <md-input-container flex>
+          <label>Nome</label>
+          <input ng-model="course.name" placeholder="Insira o nome do curso" required>
+        </md-input-container>
+        </div>
+    </form>
+  </md-content>
+   <nav class="md-actions" layout="row">
+     <span flex></span>
+     <md-button ng-click="cancel()"> Cancelar </md-button>
+     <md-button ng-disabled="courseForm.$invalid" ng-click="add(course)" class="md-primary"> Salvar </md-button>
+   </nav>
+  </md-dialog>
