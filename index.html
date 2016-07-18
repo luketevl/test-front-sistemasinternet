@@ -24,15 +24,17 @@
 
     <!-- SERVICES -->
     <script src="/js/services/coursesService.js"></script>
+    <script src="/js/services/studantsService.js"></script>
+    <script src="/js/services/registrationsService.js"></script>
     <script src="/js/services/toastService.js"></script>
 
     <!-- CONTROLLERS -->
     <script src="/js/controllers/appCtrl.js"></script>
     <script src="/js/controllers/coursesCtrl.js"></script>
+    <script src="/js/controllers/studantsCtrl.js"></script>
+    <script src="/js/controllers/registrationCtrl.js"></script>
 
     <!-- DIRECTIVES -->
-    <script src="/js/directives/responsiveTable.js"></script>
-
 
 </head>
     <body ng-controller="appCtrl">
@@ -41,13 +43,13 @@
         <md-content>
           <md-tabs md-dynamic-height md-border-bottom>
             <md-tab>
-              <a href="/#registration"><md-tab-label>Matrícula</md-tab-label></a>
+              <a href="/#courses"><md-tab-label>Cursos</md-tab-label></a>
             </md-tab>
             <md-tab>
               <a href="/#studants"><md-tab-label>Estudantes</md-tab-label></a>
             </md-tab>
-              <md-tab>
-              <a href="/#courses"><md-tab-label>Cursos</md-tab-label></a>
+            <md-tab>
+              <a href="/#registration"><md-tab-label>Matrícula</md-tab-label></a>
             </md-tab>
           </md-tabs>
           <md-content class="md-padding">

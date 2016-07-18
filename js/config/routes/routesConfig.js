@@ -12,7 +12,16 @@
       controller:  'coursesCtrl',
     });
 
+    $routeProvider.when('/studants', {
+      templateUrl: '/views/studants.html',
+      controller: 'studantsCtrl',
+    });
+
+    $routeProvider.when('/registration', {
+      templateUrl: '/views/registration.html',
+      controller: 'registrationsCtrl'
+    });
     // DEFAULT route
-    $routeProvider.otherwise({redirectTo: '/404.html'});
+    $routeProvider.otherwise({redirectTo: '/courses'});
   }
 })();

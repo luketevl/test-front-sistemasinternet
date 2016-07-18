@@ -7,14 +7,26 @@ module.exports = (grunt) => {
     pkg: grunt.file.readJSON('package.json'),
     uglify: {
       options: {
-        banner
+      force: true
+    },
+      js: {
+        files: {
+          'dist/js/scripts.js': ['dist/js/scripts.js']
+        }
+      },
+    },
+    concat:{
+        dist: {
+        src: ['js/**/*.js'],
+        dest: 'dist/js/scripts.js',
       },
     },
   });
 
   // LOAD libraries
-  grunt.loadNpmTalks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Tasks
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['concat', 'uglify']);
 };

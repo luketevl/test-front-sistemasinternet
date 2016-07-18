@@ -1,0 +1,30 @@
+<md-dialog aria-label="Cursos Cadastro">
+  <md-content class="md-padding">
+    <form name="studantForm" layout="row">
+      <div layout="row" layout-sm="column">
+        <md-input-container  class="md-block">
+          <label>Nome</label>
+          <input ng-model="studant.name" name="name" placeholder="Nome" required>
+          <div ng-messages="studantForm.studant.name.$error">
+            <div ng-message="required">Campo obrigatório.</div>
+          </div>
+          </md-input-container>
+
+          <md-input-container class="md-block">
+            <label>Email</label>
+            <input required type="email" name="email" ng-model="studant.email" minlength="3" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+            <div ng-messages="studantForm.sudant.email.$error" role="alert">
+              <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                E-mail deve ter entre 3 e 100 caracteres e ser um email ;)
+              </div>
+            </div>
+          </md-input-container>
+        </div>
+    </form>
+  </md-content>
+   <nav class="md-actions" layout="row">
+     <span flex></span>
+     <md-button ng-click="cancel()"> Cancelar </md-button>
+     <md-button ng-disabled="studantForm.$invalid" ng-click="add(studant)" class="md-primary"> Salvar </md-button>
+   </nav>
+  </md-dialog>

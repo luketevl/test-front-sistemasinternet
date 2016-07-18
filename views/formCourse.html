@@ -5,6 +5,9 @@
         <md-input-container flex>
           <label>Nome</label>
           <input ng-model="course.name" placeholder="Insira o nome do curso" required>
+          <div ng-messages="courseForm.course.name.$error">
+            <div ng-message="required">Campo obrigatório.</div>
+          </div>
         </md-input-container>
         </div>
     </form>

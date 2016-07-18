@@ -1,0 +1,39 @@
+  <section layout="row">
+    <md-content layout="column" layout-fill="layout-fill" role="main" class="relative">
+      <form name="formRegistration" layout="row" layout-align="center center">
+       <md-input-container class="md-block">
+         <label>Aluno</label>
+         <md-select ng-model="nameStudant" required>
+           <md-option ng-repeat="studant in studants" value="{{studant.name}}">{{::studant.name}}</md-option>
+         </md-select>
+         <div class="errors" ng-messages="formRegistration.nameStudant.$error" ng-if="formRegistration.$dirty">
+           <div ng-message="required">Campo obrigatório</div>
+         </div>
+       </md-input-container>
+
+      <md-input-container class="md-block">
+        <label>Curso</label>
+        <md-select name="nameCourse" ng-model="nameCourse" required>
+                   <md-option ng-repeat="course in courses" value="{{course.name}}">{{::course.name}}</md-option>
+        </md-select>
+        <div class="errors" ng-messages="formRegistration.nameCourse.$error" ng-if="formRegistration.$dirty">
+          <div ng-message="required">Campo obrigatório</div>
+        </div>
+      </md-input-container>
+      <nav class="md-actions" layout="row">
+        <span flex></span>
+        <md-button ng-disabled="formRegistration.$invalid" ng-click="add(nameStudant, nameCourse)" class="md-primary"> Salvar </md-button>
+      </nav>
+   </form>
+      <md-list>
+        <md-subheader class="md-no-sticky">Lista de matriculas</md-subheader>
+        <md-list-item ng-repeat="registration in registrations" class="noright">
+          <p>{{::registration.studant }}</p>
+          <p>{{::registration.course}}</p>
+          <md-divider ng-if="!$last"></md-divider>
+          <ng-md-icon class="md-secondary" ng-click="showAdd($event, registration)" aria-label="Editar Matricula" icon="edit"></ng-md-icon>
+          <ng-md-icon class="md-secondary" ng-click="remove(registration)" aria-label="Excluir Matricula" icon="delete"></ng-md-icon>
+        </md-list-item>
+    </md-list>
+    </md-content>
+</section>
