@@ -5,6 +5,12 @@
   - **npm install --dev**
   - **http-server**
 
-= Run tests
+= Tasks
+== Run
+>
+  - **grunt**
+
+= Unit tests
+== Run
 >
   - **karma start**
