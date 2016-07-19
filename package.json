@@ -31,12 +31,16 @@
     "angular-route": "^1.5.7"
   },
   "devDependencies": {
+    "angular-mocks": "^1.5.7",
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-uglify": "^1.0.1",
     "http-server": "^0.9.0",
     "jasmine": "^2.4.1",
+    "karma": "^1.1.1",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2",
     "sass": "^0.5.0"
   }
 }

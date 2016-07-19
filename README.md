@@ -4,3 +4,7 @@
   - **npm install**
   - **npm install --dev**
   - **http-server**
+
+= Run tests
+>
+  - **karma start**

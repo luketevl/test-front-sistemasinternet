@@ -1,12 +1,21 @@
-describe('coursesCtrl', function(){
-  beforeEach(angular.module('app'));
+(function(){
+'use strict';
 
-  it('Check the variable is empty', inject(function($controler){
-    var scope = {};
-    var ctrl = $controler('coursesCtrl', {
-      $scope: scope
-    });
+describe('coursesCtrl', function() {
+  beforeEach(module('app'));
 
-    expect(scope.courses).toBe({});
+  var $controller;
+
+  beforeEach(inject(function(_$controller_){
+    $controller = _$controller_;
   }));
+
+  describe('$scope.courses', function() {
+    it('verify if courses is empty object', function() {
+      var $scope = {};
+      var controller = $controller('coursesCtrl', {$scope: $scope});
+      expect($scope.courses).toEqual([]);
+    });
+  });
 });
+})();
