@@ -3,12 +3,16 @@
 >
   - **npm install**
   - **npm install --dev**
-  - **http-server**
 
 = Tasks
 == Run
 >
   - **grunt**
+
+= Server
+== Unit the Server
+  >
+    - **http-server**
 
 = Unit tests
 == Run
